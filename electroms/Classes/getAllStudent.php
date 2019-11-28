@@ -10,24 +10,16 @@ require 'Classes/Class_Formation.php';
 require 'Classes/Class_Formation_HumanBooster.php';
 require 'Classes/Class_Cours.php';
 
-//Connexion a la base de donnée
-try
-{
-    //$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+//$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
     $db = new PDO('mysql:host=localhost;dbname=cours2_sql', 'root', '');
-}
-catch (Exception $e)
-{
-       die('Erreur : ' . $e->getMessage());
-}
+
 // On émet une alerte à chaque fois qu'une requête a échoué.
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-// On récupère tout le contenu de la table
-$sql = $db->query('SELECT id, nom, cours, typeOf  FROM etudiant');
+    
+// On récupère tout le contenu de la table jeux_video
+$sql = $db->query('SELECT Etu_id,Etu_nom,Etu_cours,Etu_typeOf, FROM etudiants');
 // On affiche chaque entrée une à une
 while ($studentSql = $sql->fetch())
 {
-    $student = new Etudiant($studentSql["nom"],$studentSql["cours"],$studentSql["typeOf"]);
-    //print_r($student);
-    echo $student->printStudent();
+    print_r($studentSql);
 }

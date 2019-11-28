@@ -23,11 +23,11 @@ catch (Exception $e)
 // On émet une alerte à chaque fois qu'une requête a échoué.
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 // On récupère tout le contenu de la table
-$sql = $db->query('SELECT id, nom, cours, typeOf  FROM etudiant');
+$sql = $db->query('SELECT id, nom, cours, typeOf  FROM formateur');
 // On affiche chaque entrée une à une
-while ($studentSql = $sql->fetch())
+while ($formateurSql = $sql->fetch())
 {
-    $student = new Etudiant($studentSql["nom"],$studentSql["cours"],$studentSql["typeOf"]);
+    $formateur = new Formateur($formateurSql["nom"],$formateurSql["cours"],$formateurSql["typeOf"]);
     //print_r($student);
-    echo $student->printStudent();
+    echo $formateur->printFormateur();
 }
