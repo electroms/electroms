@@ -1,0 +1,68 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	color: #000000;
+	background: #45466f;
+	font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+	color: black;
+}
+h2 {
+	color: white;
+}
+#45466f
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#header {
+	display: block;
+}
+#global {
+	display: block;
+	clear: both;
+	min-height: 100%; /* Voir commentaire sur html et body plus haut */
+	background: #329fb1;
+	width: 70%;
+	margin: auto; /* Permet de centrer la div */
+	text-align: left;
+	padding: 5px 20px;
+}
+#contenu {
+	margin-bottom: 30px;
+}
+#titreBlog, #piedBlog {
+	text-align: center;
+}
+
+.w {
+	overflow: hidden;
+	width: 103%;
+	margin: 0 auto;
+}
+section {
+	/* margin: -1%;*/
+	padding-top: 10px;
+}
+
+section div#cadre {
+	background: #bfbfbf;
+	float: left;
+	height: 35vw;
+	margin: 1%;
+	width: 28%;
+	border: 1px solid;
+	padding: 0px 10px;
+}
+
+article {
+	background: #bfbfbf;
+	border: 1px solid;
+	padding: 10px;
+	margin: 10px 0px;
+}

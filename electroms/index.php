@@ -1,3 +1,16 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="css/style.css" />
+<title>Présentation Pierre-Henry Barge</title>
+</head>
+<body>
+	<header id="header">
+		<a href="index"><h1 id="titreBlog">Présentation Pierre-Henry Barge</h1></a>
+	</header>
+<div id="global">
+	<div class="w">
 <?php
 require 'Classes/Class_Adresse.php';
 require 'Classes/Class_User.php';
@@ -70,3 +83,11 @@ echo " <div> <img class='fit-picture'
     echo $experience->printCV();
     echo $formationHumanBooster->printCV();
 ?>
+        </section>
+	</div>
+</div>
+<footer id="piedBlog">
+Blog réalisé par PHB
+</footer>
+</body>
+</html>
